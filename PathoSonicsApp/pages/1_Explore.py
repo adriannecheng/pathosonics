@@ -109,7 +109,7 @@ def generate_audio_signal(sequence):
             
     return full_audio, sample_rate
 
-st.title("➕ Custom Sequencing Exploration")
+st.title("🔎 Custom Sequencing Exploration")
 st.write("Input raw uppercase FASTA strings below to evaluate custom biometric sonic signals!")
 st.markdown("---")
 
