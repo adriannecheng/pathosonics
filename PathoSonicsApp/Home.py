@@ -55,22 +55,36 @@ st.markdown("""
     
     .main { background-color: #0E1117; }
     
-    /* Interactive Control Buttons (Blue Lavender to Dark Blue Lavender Hover) */
+    /* Interactive Control Buttons Style Configuration */
     div.stButton > button:first-child {
-        background-color: #99acff !important; 
-        color: #0E1117 !important; 
-        font-weight: bold;
+        background-color: #9ea5f3 !important; /* Your current lavender blue shade */
         border-radius: 8px; 
         border: none; 
         padding: 0.5rem 2rem;
-        font-family: 'Avenir', sans-serif !important;
+        font-family: 'Inter', sans-serif !important;
+        transition: all 0.2s ease-in-out;
     }
+    
+    /* FORCE TEXT AND EMOJIS INSIDE BUTTON TO BE DARK CHARCOAL */
+    /* This new targeting rule specifically overrides the text contrast issue you are seeing */
+    div.stButton > button:first-child, 
+    div.stButton > button:first-child p, 
+    div.stButton > button:first-child div {
+        color: #0E1117 !important; /* Ink-dark charcoal gray text */
+        font-weight: 700 !important; /* Keeps the text crisp and bold */
+    }
+    
+    /* Hover State Configuration */
     div.stButton > button:first-child:hover {
-        background-color: #00B2CC !important; 
-        color: #FFFFFF !important;
+        background-color: #7b83df !important; /* Deepens background when hovered */
     }
-    </style>
-    """, unsafe_allow_html=True)
+    
+    /* Keep text white on hover for sharp feedback styling */
+    div.stButton > button:first-child:hover,
+    div.stButton > button:first-child:hover p,
+    div.stButton > button:first-child:hover div {
+        color: #FFFFFF !important; /* Snaps text to white for ultimate contrast */
+    }
 
 # Custom Sidebar Text & Emoji Branding Logo
 import os
