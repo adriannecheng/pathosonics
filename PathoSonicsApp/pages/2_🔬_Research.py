@@ -2,7 +2,7 @@ import streamlit as st
 import streamlit.components.v1 as components # <--- Crucial module for HTML frames
 
 # Page configuration
-st.set_page_config(page_title=" Research Findings", page_icon="🔬", layout="normal")
+st.set_page_config(page_title=" Research Findings", page_icon="🔬", layout="centered")
 
 # 2. Global Theme Styling Injection (Updated Color Hierarchy)
 st.markdown("""
