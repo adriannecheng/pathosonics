@@ -24,7 +24,7 @@ st.markdown(""
     /* Background and global body text styling (Slate Silver) */
     .main, p, div, label, span { 
         font-family: 'Avenir', sans-serif !important; 
-        font-size: 1.05rem;
+        font-size: 1.05 rem;
         color: #94A3B8 !important; /* Premium silver text */
     }
     
