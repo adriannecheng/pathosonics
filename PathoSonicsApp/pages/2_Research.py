@@ -7,12 +7,6 @@ st.set_page_config(page_title=" Research Findings", page_icon="🔬", layout="ce
 # 2. Global Theme Styling Injection (Updated Color Hierarchy)
 st.markdown("""
     <style>  
-    /* Optional: If the button container frame itself is still making an empty box, use this */
-    .st-emotion-cache-16ids9p, [data-markdown-target="true"] {
-        font-size: 0px !important;
-        color: transparent !important;
-    }
-
     @import url('https://googleapis.com');
     @import url('https://googleapis.com');
 
