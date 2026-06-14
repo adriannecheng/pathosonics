@@ -8,6 +8,20 @@ st.set_page_config(page_title="Custom Sequencing Exploration", page_icon="🧪",
     # 2. Global Theme Styling Injection (Updated Header Font Sizes)
 st.markdown("""
     <style>
+        /* TARGET AND BANISH THE KEYBOARD DOUBLE ARROW NAV GLITCH */
+    /* This rule searches for the broken material icon label and hides it entirely */
+    [data-testid="stSidebarCollapseButton"] button div,
+    span:contains("keyboard_double_arrow") {
+        display: none !important;
+        visibility: hidden !important;
+    }
+    
+    /* Optional: If the button container frame itself is still making an empty box, use this */
+    .st-emotion-cache-16ids9p, [data-markdown-target="true"] {
+        font-size: 0px !important;
+        color: transparent !important;
+    }
+
     @import url('https://googleapis.com');
     @import url('https://googleapis.com');
 
