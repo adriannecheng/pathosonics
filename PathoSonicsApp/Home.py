@@ -23,7 +23,7 @@ st.markdown("""
 
     /* Background and global body text styling (Slate Silver) */
     .main, p, div, label, span { 
-        font-family: 'Microsoft', sans-serif !important; 
+        font-family: 'Avenir', sans-serif !important; 
         font-size: 1.05rem;
         color: #94A3B8 !important; /* Premium silver text */
     }
@@ -63,7 +63,7 @@ st.markdown("""
         border-radius: 8px; 
         border: none; 
         padding: 0.5rem 2rem;
-        font-family: 'Microsoft', sans-serif !important;
+        font-family: 'Avenir', sans-serif !important;
     }
     div.stButton > button:first-child:hover {
         background-color: #00B2CC !important; 
