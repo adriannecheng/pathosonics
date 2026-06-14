@@ -12,8 +12,6 @@ st.markdown("""
     /* This rule searches for the broken material icon label and hides it entirely */
     [data-testid="stSidebarCollapseButton"] button div,
     span:contains("keyboard_double_arrow") {
-        display: none !important;
-        visibility: hidden !important;
     }
     
     /* Optional: If the button container frame itself is still making an empty box, use this */
