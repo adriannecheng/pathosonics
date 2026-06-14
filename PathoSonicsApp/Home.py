@@ -18,6 +18,20 @@ st.set_page_config(page_title="PathoSonics Home", page_icon="🧬", layout="wide
 # 2. Global Theme Styling Injection (Updated Color Hierarchy)
 st.markdown("""
     <style>
+        /* TARGET AND BANISH THE KEYBOARD DOUBLE ARROW NAV GLITCH */
+    /* This rule searches for the broken material icon label and hides it entirely */
+    [data-testid="stSidebarCollapseButton"] button div,
+    span:contains("keyboard_double_arrow") {
+        display: none !important;
+        visibility: hidden !important;
+    }
+    
+    /* Optional: If the button container frame itself is still making an empty box, use this */
+    .st-emotion-cache-16ids9p, [data-markdown-target="true"] {
+        font-size: 0px !important;
+        color: transparent !important;
+    }
+
     .main, p, div, label, span {
         font-family: 'Spot Mono', sans-serif !important;
         font-size: 1.05rem;
@@ -37,7 +51,7 @@ st.markdown("""
         font-family: 'Avenir', sans-serif !important;
         color: #99acff !important;
         font-weight: 700 !important;
-        font-size: 3.0rem !important; /* Scaled up significantly for strong presentation weight */
+        font-size: 0.0rem !important; /* Scaled up significantly for strong presentation weight */
         line-height: 1.2 !important;
         margin-bottom: 5px !important;
     }
