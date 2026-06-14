@@ -1,6 +1,14 @@
 import streamlit as st
-import numpy as np
-import time
+
+# 1. Define page schemas (Ensure the actual filenames match exactly)
+home_page = st.Page("app.py", title="Home", icon="🏠", default=True)
+research_page = st.Page("Research.py", title="Research Manuscript", icon="🔬")
+sandbox_page = st.Page("Sandbox.py", title="Custom Sandbox", icon="🧪")
+cell_page = st.Page("Cell_Lab.py", title="Cytopathology Lab", icon="🔬")
+
+# 2. Compile into the navigation builder
+pg = st.navigation([home_page, research_page, sandbox_page, cell_page])
+
 
 # Custom CSS to hide the footer and the main menu
 hide_st_style = """
@@ -184,3 +192,9 @@ with nav_col3:
 
 st.markdown("---")
 st.info("💡 *Want to process completely unique custom data? Navigate to **2 🧪 Explore** inside your left sidebar menu panel!*")
+
+# ==============================================================================
+# FINAL LINE OF APP.PY: TRIGGER NAVIGATION SERVER
+# ==============================================================================
+# This tells the program to execute the router and render the navigation menu list!
+pg.run()
