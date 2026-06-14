@@ -68,8 +68,14 @@ st.markdown("""
 
 # Custom Sidebar Branding Logo (Matching Home)
 import os
-if os.path.exists("logo.png"):
-    st.sidebar.image("logo.png", use_container_width=True)
+import streamlit as st
+
+# Calculates the subpage location, then safely steps backward to the root path
+pages_dir = os.path.dirname(os.path.abspath(__file__))
+logo_path = os.path.abspath(os.path.join(pages_dir, "..", "logo.png"))
+
+if os.path.exists(logo_path):
+    st.sidebar.image(logo_path, use_container_width=True)
     st.sidebar.markdown("<br>", unsafe_allow_html=True)
 
 # 2. Correctly execute your text headers so raw HTML code does not print out
