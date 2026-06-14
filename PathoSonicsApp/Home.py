@@ -105,7 +105,7 @@ st.sidebar.markdown("""
         <p style='font-size: 0.85rem; color: #94A3B8; text-transform: uppercase; letter-spacing: 2px;'>Educational Sonification Lab</p>
     </div>
     <hr style='margin-top: 0px; margin-bottom: 20px; border-color: #1F2937;'>
-""", unsafe_allow_html=True)
+"", unsafe_allow_html=True)
 
 # Master conversion dictionary mapping biochemical properties to MIDI pitches
 protein_scale = {
