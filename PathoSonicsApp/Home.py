@@ -41,7 +41,7 @@ st.markdown(""
         font-family: 'Avenir', sans-serif !important; 
         color: #99acff !important; 
         font-weight: 700 !important;
-        font-size: 3.0rem !important; /* Scaled up significantly for strong presentation weight */
+        font-size: 3.0 rem !important; /* Scaled up significantly for strong presentation weight */
         line-height: 1.2 !important;
         margin-bottom: 5px !important;
     }
