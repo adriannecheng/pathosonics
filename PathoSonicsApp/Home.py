@@ -1,10 +1,9 @@
 import streamlit as st
 
 # 1. Define page schemas (Ensure the actual filenames match exactly)
-home_page = st.Page("app.py", title="Home", icon="🏠", default=True)
+home_page = st.Page("Home.py", title="Home", icon="🧬", default=True)
 research_page = st.Page("Research.py", title="Research Manuscript", icon="🔬")
-sandbox_page = st.Page("Sandbox.py", title="Custom Sandbox", icon="🧪")
-cell_page = st.Page("Cell_Lab.py", title="Cytopathology Lab", icon="🔬")
+explore_page = st.Page("Sandbox.py", title="Custom Exploration", icon="🧪")
 
 # 2. Compile into the navigation builder
 pg = st.navigation([home_page, research_page, sandbox_page, cell_page])
