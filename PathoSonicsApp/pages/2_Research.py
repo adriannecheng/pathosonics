@@ -24,13 +24,13 @@ st.markdown("""
         font-weight: 700;
     }
     
-    /* MAIN PAGE TITLE OVERRIDE ("PathoSonics Portfolio Carousel") */
+    /* MAIN PAGE TITLE OVERRIDE */
     /* This rule forces your primary page headings to scale up beautifully */
     h1 { 
         font-family: 'Spot Mono', sans-serif !important; 
         color: #99acff !important; 
         font-weight: 700 !important;
-        font-size: 3.0rem !important; /* Scaled up significantly for strong presentation weight */
+        font-size: 0.0rem !important; /* Scaled up significantly for strong presentation weight */
         line-height: 1.2 !important;
         margin-bottom: 5px !important;
     }
