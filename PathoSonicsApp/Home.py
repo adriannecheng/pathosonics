@@ -13,7 +13,7 @@ hide_st_style = """
 st.markdown(hide_st_style, unsafe_allow_html=True)
 
 # Page config setup
-st.set_page_config(page_title="PathoSonics Home", page_icon="logo.png", layout="wide")
+st.set_page_config(page_title="PathoSonics Home", page_icon="🧬", layout="wide")
 
 # 2. Global Theme Styling Injection (Updated Color Hierarchy)
 st.markdown("""
