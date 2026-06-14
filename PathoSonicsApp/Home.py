@@ -183,4 +183,4 @@ with nav_col3:
         st.rerun()
 
 st.markdown("---")
-st.info("💡 *Want to process completely unique custom data? Navigate to **2 🧪 Explore** inside your left sidebar menu panel!*")
+st.info("💡 *Want to process custom data, or trying it for yourself? Navigate to the **Explore** page inside your left sidebar menu panel!*")
