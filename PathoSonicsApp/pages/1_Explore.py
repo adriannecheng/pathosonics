@@ -82,10 +82,16 @@ st.markdown("""
 
 # Custom Sidebar Branding Logo (Matching Home)
 import os
-if os.path.exists("logo.png"):
-    st.sidebar.image("logo.png", use_container_width=True)
-    st.sidebar.markdown("<br>", unsafe_allow_html=True)
+import streamlit as st
 
+# Calculates the subpage location, then safely steps backward to the root path
+pages_dir = os.path.dirname(os.path.abspath(__file__))
+logo_path = os.path.abspath(os.path.join(pages_dir, "..", "logo.png"))
+
+if os.path.exists(logo_path):
+    st.sidebar.image(logo_path, use_container_width=True)
+    st.sidebar.markdown("<br>", unsafe_allow_html=True)
+    
 protein_scale = {
     'I': 36, 'V': 38, 'L': 40, 'F': 43, 'C': 45, 'M': 48, 'A': 50, 'G': 52, 'T': 55, 'S': 57,
     'W': 60, 'Y': 62, 'P': 64, 'H': 67, 'E': 69, 'Q': 72, 'D': 74, 'N': 76, 'K': 79, 'R': 81
