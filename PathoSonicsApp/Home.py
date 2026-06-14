@@ -73,6 +73,17 @@ st.markdown("""
     """, unsafe_allow_html=True)
 
 # Custom Sidebar Text & Emoji Branding Logo
+import os
+import streamlit as st
+
+# Automatically calculates the correct path whether running locally or on Streamlit Cloud
+current_dir = os.path.dirname(__file__)
+logo_path = os.path.join(current_dir, "..", "logo.png")
+
+if os.path.exists(logo_path):
+    st.sidebar.image(logo_path, use_container_width=True)
+    st.sidebar.markdown("<br>", unsafe_allow_html=True)
+
 if os.path.exists("logo.png"):
     st.sidebar.image("logo.png", use_container_width=True)
 
