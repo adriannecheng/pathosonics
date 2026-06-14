@@ -12,7 +12,7 @@ st.markdown("""
 
     /* Background and global body text styling (Slate Silver) */
     .main, p, div, label, span { 
-        font-family: 'Microsoft', sans-serif !important; 
+        font-family: 'Spot Mono', sans-serif !important; 
         font-size: 1.05rem;
         color: #94A3B8 !important; /* Premium silver text */
     }
