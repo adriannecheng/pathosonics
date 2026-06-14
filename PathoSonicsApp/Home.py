@@ -16,7 +16,7 @@ st.markdown(hide_st_style, unsafe_allow_html=True)
 st.set_page_config(page_title="PathoSonics Home", page_icon="logo.png", layout="wide")
 
 # 2. Global Theme Styling Injection (Updated Color Hierarchy)
-st.markdown("""
+st.markdown(""
     <style>
     @import url('https://googleapis.com');
     @import url('https://googleapis.com');
