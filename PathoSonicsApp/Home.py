@@ -1,5 +1,35 @@
 import streamlit as st
+import os
 
+# Define the global page structure maps
+home_page = st.Page("Home.py", title="Home", icon="🏠", default=True)
+research_page = st.Page("Research.py", title="Research Manuscript", icon="🔬")
+sandbox_page = st.Page("Sandbox.py", title="Custom Sandbox", icon="🧪")
+cell_page = st.Page("Cell_Lab.py", title="Cytopathology Lab", icon="🔬")
+
+pg = st.navigation([home_page, research_page, sandbox_page, cell_page])
+
+# Insert your unified custom sidebar logo code here
+root_dir = os.path.dirname(os.path.abspath(__file__))
+logo_path = os.path.join(root_dir, "logo.png")
+if os.path.exists(logo_path):
+    st.sidebar.image(logo_path, use_container_width=True)
+
+st.sidebar.markdown("""
+    <div style='text-align: left; margin-bottom: 20px;'>
+        <h1 style='font-size: 2.2rem; color: #00E5FF !important; margin-bottom: 0px;'>🧬 Helix</h1>
+        <p style='font-size: 0.85rem; color: #94A3B8; text-transform: uppercase; letter-spacing: 2px;'>Harmonics Lab</p>
+    </div>
+    <hr style='margin-top: 0px; margin-bottom: 20px; border-color: #1F2937;'>
+""", unsafe_allow_html=True)
+
+# THE SAFETY GUARD: Wrap your original home page code inside this conditional statement
+if pg.title == "Home":
+    # -------------------------------------------------------------------------
+    # DO NOT DELETE ANYTHING BELOW THIS LINE!
+    # KEEP ALL YOUR ORIGINAL HOME PAGE CODE HERE
+    # (Your global styles, carousel_data, button events, sound loops, etc.)
+    # -------------------------------------------------------------------------
 
 # Custom CSS to hide the footer and the main menu
 hide_st_style = """
@@ -184,8 +214,9 @@ with nav_col3:
 st.markdown("---")
 st.info("💡 *Want to process completely unique custom data? Navigate to **2 🧪 Explore** inside your left sidebar menu panel!*")
 
-# ==============================================================================
-# FINAL LINE OF APP.PY: TRIGGER NAVIGATION SERVER
-# ==============================================================================
-# This tells the program to execute the router and render the navigation menu list!
-pg.run()
+# -------------------------------------------------------------------------
+# END OF YOUR ORIGINAL HOME CODE
+# -------------------------------------------------------------------------
+else:
+    # If the user clicks any subpage in the sidebar, run the router to load it
+    pg.run()
