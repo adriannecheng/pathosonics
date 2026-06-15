@@ -6,7 +6,7 @@ home_page = st.Page("Home.py", title="Home", icon="🧬", default=True)
 research_page = st.Page("Research.py", title="Research Manuscript", icon="🔬")
 explore_page = st.Page("Explore.py", title="Custom Sequence Exploration", icon="🧪")
 
-pg = st.navigation([home_page, research_page, sandbox_page])
+pg = st.navigation([home_page, research_page, explore_page])
 
 # ==============================================================================
 # UNIFIED LOGO INTEGRATION ZONE (RUNS ON ALL PAGES)
