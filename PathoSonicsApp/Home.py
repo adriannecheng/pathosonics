@@ -1,6 +1,43 @@
 import streamlit as st
-import numpy as np
-import time
+import os
+
+# 1. ESTABLISH THE ROUTER PAGES MAP
+home_page = st.Page("Home.py", title="Home", icon="🏠", default=True)
+research_page = st.Page("Research.py", title="Research Manuscript", icon="🔬")
+sandbox_page = st.Page("Sandbox.py", title="Custom Sandbox", icon="🧪")
+cell_page = st.Page("Cell_Lab.py", title="Cytopathology Lab", icon="🔬")
+
+pg = st.navigation([home_page, research_page, sandbox_page, cell_page])
+
+# ==============================================================================
+# UNIFIED LOGO INTEGRATION ZONE (RUNS ON ALL PAGES)
+# ==============================================================================
+# A. Safely trace the absolute root directory path of your folder files
+root_dir = os.path.dirname(os.path.abspath(__file__))
+logo_path = os.path.join(root_dir, "logo.png")
+
+# B. Draw the physical logo image on the sidebar if the file exists
+if os.path.exists(logo_path):
+    st.sidebar.image(logo_path, use_container_width=True)
+    st.sidebar.markdown("<br>", unsafe_allow_html=True)
+
+# C. Draw the stylized text branding panels right below your image
+st.sidebar.markdown("""
+    <div style='text-align: left; margin-bottom: 20px;'>
+        <h1 style='font-size: 2.2rem; color: #00E5FF !important; margin-bottom: 0px;'>🧬 Helix</h1>
+        <p style='font-size: 0.85rem; color: #94A3B8; text-transform: uppercase; letter-spacing: 2px;'>Harmonics Lab</p>
+    </div>
+    <hr style='margin-top: 0px; margin-bottom: 20px; border-color: #1F2937;'>
+""", unsafe_allow_html=True)
+
+# ==============================================================================
+# THE IF-GUARD LOCK
+# ==============================================================================
+if pg.title == "Home":
+    # -------------------------------------------------------------------------
+    # YOUR INDENTED HOME PORTFOLIO CODE LIVES HERE
+    # (Line 35: hide_st_style, carousels, audio tracks, tables, etc.)
+    # -------------------------------------------------------------------------
 
 # Custom CSS to hide the footer and the main menu
 hide_st_style = """
@@ -183,4 +220,4 @@ with nav_col3:
         st.rerun()
 
 st.markdown("---")
-st.info("💡 *Want to process completely unique custom data? Navigate to **2 🧪 Explore** inside your left sidebar menu panel!*")
+st.info("💡 *Want to process completely unique custom data? Navigate to the **Explore** page inside your left sidebar menu panel!*")
