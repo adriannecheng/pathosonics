@@ -24,7 +24,7 @@ st.sidebar.markdown("""
 """, unsafe_allow_html=True)
 
 # THE SAFETY GUARD: Wrap your original home page code inside this conditional statement
-    if pg.title == "Home":
+if pg.title == "Home":
     # -------------------------------------------------------------------------
     # DO NOT DELETE ANYTHING BELOW THIS LINE!
     # KEEP ALL YOUR ORIGINAL HOME PAGE CODE HERE
