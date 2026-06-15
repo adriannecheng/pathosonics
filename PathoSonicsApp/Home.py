@@ -39,9 +39,12 @@ if pg.title == "Home":
     # -------------------------------------------------------------------------
 
     # Custom CSS to hide the footer and the main menu
+    # ==========================================================================
+    # CLEANED STYLING BLOCK (SIDEBAR HIDING REMOVED)
+    # ==========================================================================
     hide_st_style = """
                 <style>
-                #MainMenu {visibility: hidden;}
+                /* Keeps the bottom footer clean without erasing your sidebar layout links */
                 footer {visibility: hidden;}
                 header {visibility: hidden;}
                 </style>
