@@ -5,7 +5,6 @@ import time
 # Custom CSS to hide the footer and the main menu
 hide_st_style = """
             <style>
-            #MainMenu {visibility: hidden;}
             footer {visibility: hidden;}
             header {visibility: hidden;}
             </style>
