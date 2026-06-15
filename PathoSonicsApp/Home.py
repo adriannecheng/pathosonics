@@ -1,13 +1,5 @@
 import streamlit as st
 
-# 1. Define page schemas (Ensure the actual filenames match exactly)
-home_page = st.Page("Home.py", title="Home", icon="🧬", default=True)
-research_page = st.Page("Research.py", title="Research Manuscript", icon="🔬")
-explore_page = st.Page("Sandbox.py", title="Custom Exploration", icon="🧪")
-
-# 2. Compile into the navigation builder
-pg = st.navigation([home_page, research_page, sandbox_page, cell_page])
-
 
 # Custom CSS to hide the footer and the main menu
 hide_st_style = """
