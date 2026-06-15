@@ -21,7 +21,7 @@ if os.path.exists(logo_path):
     st.sidebar.markdown("<br>", unsafe_allow_html=True)
 
 # C. Draw the stylized text branding panels right below your image
-st.sidebar.markdown("""
+st.sidebar.markdown(""
     <div style='text-align: left; margin-bottom: 20px;'>
         <h1 style='font-size: 2.2rem; color: #00E5FF !important; margin-bottom: 0px;'>🧬 Helix</h1>
         <p style='font-size: 0.85rem; color: #94A3B8; text-transform: uppercase; letter-spacing: 2px;'>Harmonics Lab</p>
